@@ -1,0 +1,124 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad-2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0c081d"/>
+      <stop offset="50%" stop-color="#150f2e"/>
+      <stop offset="100%" stop-color="#24113b"/>
+    </linearGradient>
+    <linearGradient id="purple-cyan" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9d4edd"/>
+      <stop offset="100%" stop-color="#ff007f"/>
+    </linearGradient>
+    <linearGradient id="progress-bar-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#9d4edd"/>
+      <stop offset="50%" stop-color="#00f2fe"/>
+      <stop offset="100%" stop-color="#10b981"/>
+    </linearGradient>
+    <filter id="glow-2" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="800" height="450" fill="url(#bg-grad-2)"/>
+
+  <!-- Subtle Neural / Network Lines -->
+  <g opacity="0.15" stroke="#9d4edd" stroke-width="1.2">
+    <line x1="120" y1="110" x2="220" y2="170"/>
+    <line x1="220" y1="170" x2="150" y2="280"/>
+    <line x1="150" y1="280" x2="280" y2="330"/>
+    <line x1="220" y1="170" x2="310" y2="210"/>
+    <line x1="120" y1="110" x2="310" y2="210"/>
+  </g>
+
+  <!-- Neural Nodes -->
+  <circle cx="120" cy="110" r="7" fill="#00f2fe" filter="url(#glow-2)"/>
+  <circle cx="220" cy="170" r="10" fill="#9d4edd" filter="url(#glow-2)"/>
+  <circle cx="150" cy="280" r="8" fill="#ff007f" filter="url(#glow-2)"/>
+  <circle cx="280" cy="330" r="6" fill="#00f2fe"/>
+  <circle cx="310" cy="210" r="9" fill="#10b981" filter="url(#glow-2)"/>
+
+  <!-- Left: Resume Parsing & Semantic Matching Visual Card -->
+  <g transform="translate(60, 60)">
+    <!-- Document Stack -->
+    <rect x="0" y="15" width="220" height="280" rx="12" fill="#16132f" stroke="rgba(255,255,255,0.08)" stroke-width="1.5"/>
+    <rect x="15" y="0" width="220" height="280" rx="12" fill="#1b163d" stroke="#9d4edd" stroke-width="2" filter="url(#glow-2)"/>
+    
+    <!-- Document Header -->
+    <circle cx="45" cy="35" r="14" fill="#9d4edd"/>
+    <path d="M 40 35 L 44 39 L 52 30" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="70" y="34" fill="#ffffff" font-family="'Outfit', sans-serif" font-weight="700" font-size="13">Candidate Resume</text>
+    <text x="70" y="48" fill="#94a3b8" font-family="sans-serif" font-size="10">NLP Skill Extractor</text>
+
+    <!-- Document Lines / Tokens -->
+    <line x1="35" y1="75" x2="215" y2="75" stroke="rgba(255,255,255,0.1)" stroke-width="2"/>
+    <rect x="35" y="90" width="60" height="20" rx="10" fill="rgba(0, 242, 254, 0.2)" stroke="#00f2fe" stroke-width="1"/>
+    <text x="65" y="104" fill="#00f2fe" font-family="sans-serif" font-size="10" text-anchor="middle">Java</text>
+
+    <rect x="105" y="90" width="85" height="20" rx="10" fill="rgba(157, 78, 221, 0.2)" stroke="#9d4edd" stroke-width="1"/>
+    <text x="147" y="104" fill="#d8b4fe" font-family="sans-serif" font-size="10" text-anchor="middle">JavaScript</text>
+
+    <rect x="35" y="120" width="75" height="20" rx="10" fill="rgba(255, 0, 127, 0.2)" stroke="#ff007f" stroke-width="1"/>
+    <text x="72" y="134" fill="#fda4af" font-family="sans-serif" font-size="10" text-anchor="middle">MongoDB</text>
+
+    <rect x="120" y="120" width="55" height="20" rx="10" fill="rgba(16, 185, 129, 0.2)" stroke="#10b981" stroke-width="1"/>
+    <text x="147" y="134" fill="#6ee7b7" font-family="sans-serif" font-size="10" text-anchor="middle">SQL</text>
+
+    <!-- Compatibility Score Circle -->
+    <g transform="translate(125, 205)">
+      <circle cx="0" cy="0" r="45" fill="#0f0c23" stroke="#9d4edd" stroke-width="3"/>
+      <circle cx="0" cy="0" r="45" fill="none" stroke="#00f2fe" stroke-width="4" stroke-dasharray="210 282"/>
+      <text x="0" y="2" fill="#ffffff" font-family="'Outfit', sans-serif" font-weight="800" font-size="20" text-anchor="middle">92%</text>
+      <text x="0" y="18" fill="#94a3b8" font-family="sans-serif" font-size="9" text-anchor="middle">MATCH SCORE</text>
+    </g>
+  </g>
+
+  <!-- Right: Dashboard & Skill Gap Report -->
+  <g transform="translate(345, 60)">
+    <rect x="0" y="0" width="400" height="320" rx="14" fill="#120e29" stroke="rgba(255,255,255,0.12)" stroke-width="2"/>
+    <rect x="0" y="0" width="400" height="42" rx="14" fill="#1a153b"/>
+    <rect x="0" y="28" width="400" height="14" fill="#1a153b"/>
+
+    <!-- Window Controls -->
+    <circle cx="24" cy="21" r="6" fill="#ef4444"/>
+    <circle cx="44" cy="21" r="6" fill="#f59e0b"/>
+    <circle cx="64" cy="21" r="6" fill="#10b981"/>
+    <text x="210" y="26" fill="#c4b5fd" font-family="'JetBrains Mono', monospace" font-size="12" text-anchor="middle">Intelligent Job Matching Dashboard</text>
+
+    <!-- Job Match Card -->
+    <rect x="20" y="58" width="360" height="74" rx="10" fill="#181338" stroke="rgba(157, 78, 221, 0.4)" stroke-width="1.5"/>
+    <text x="35" y="82" fill="#ffffff" font-family="'Outfit', sans-serif" font-weight="bold" font-size="14">Software Engineer Intern (Full-Stack)</text>
+    <text x="35" y="100" fill="#94a3b8" font-family="sans-serif" font-size="11">Semantic Match: High Compatibility (Cosine: 0.92)</text>
+    <rect x="35" y="112" width="220" height="8" rx="4" fill="rgba(255,255,255,0.1)"/>
+    <rect x="35" y="112" width="202" height="8" rx="4" fill="url(#progress-bar-grad)"/>
+    <rect x="290" y="80" width="75" height="32" rx="16" fill="rgba(16, 185, 129, 0.15)" stroke="#10b981" stroke-width="1"/>
+    <text x="327" y="101" fill="#10b981" font-family="'Outfit', sans-serif" font-weight="bold" font-size="12" text-anchor="middle">Strong Fit</text>
+
+    <!-- Skill Gap Identification -->
+    <g transform="translate(20, 146)">
+      <text x="0" y="16" fill="#e2e8f0" font-family="'Outfit', sans-serif" font-weight="600" font-size="13">Detected Skill Gaps &amp; Recommendations</text>
+      
+      <!-- Gap 1 -->
+      <rect x="0" y="28" width="360" height="52" rx="8" fill="#171336" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <circle cx="22" cy="54" r="8" fill="rgba(245, 158, 11, 0.2)" stroke="#f59e0b" stroke-width="1.5"/>
+      <text x="22" y="58" fill="#f59e0b" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">!</text>
+      <text x="40" y="48" fill="#f1f5f9" font-family="sans-serif" font-size="12" font-weight="600">Docker &amp; Containerization</text>
+      <text x="40" y="66" fill="#94a3b8" font-family="sans-serif" font-size="11">Suggested: Complete 2h containerization roadmap</text>
+      
+      <!-- Gap 2 -->
+      <rect x="0" y="88" width="360" height="52" rx="8" fill="#171336" stroke="rgba(255,255,255,0.06)" stroke-width="1"/>
+      <circle cx="22" cy="114" r="8" fill="rgba(0, 242, 254, 0.2)" stroke="#00f2fe" stroke-width="1.5"/>
+      <text x="22" y="118" fill="#00f2fe" font-family="sans-serif" font-size="11" font-weight="bold" text-anchor="middle">✦</text>
+      <text x="40" y="108" fill="#f1f5f9" font-family="sans-serif" font-size="12" font-weight="600">Spring Boot Framework</text>
+      <text x="40" y="126" fill="#94a3b8" font-family="sans-serif" font-size="11">High overlap with Java OOP knowledge</text>
+    </g>
+  </g>
+
+  <!-- Bottom Tag -->
+  <g transform="translate(60, 395)">
+    <rect x="0" y="0" width="330" height="36" rx="18" fill="rgba(157, 78, 221, 0.15)" stroke="#9d4edd" stroke-width="1.5"/>
+    <circle cx="20" cy="18" r="6" fill="#9d4edd"/>
+    <text x="35" y="23" fill="#ffffff" font-family="'Outfit', sans-serif" font-weight="600" font-size="13">NLP Job Matching &amp; Skill Gap Analyzer</text>
+  </g>
+</svg>
